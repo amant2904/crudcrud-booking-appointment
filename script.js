@@ -47,7 +47,7 @@ function showDataInUI(details, id) {
 }
 
 // get data fron api to UI
-function getData() {
+window.addEventListener('DOMContentLoaded', () => {
     axios.get(api_url)
         .then((res) => {
             for (let i = 0; i < res.data.length; i++) {
@@ -57,8 +57,7 @@ function getData() {
         .catch(err => {
             console.log(err);
         });
-}
-getData();
+})
 
 // main button for submit data
 document.getElementById('main_btn').addEventListener('click', (e) => {
