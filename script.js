@@ -83,7 +83,9 @@ document.getElementById('main_btn').addEventListener('click', (e) => {
 // working of edit and delete button
 document.getElementById("main_table").addEventListener('click', (e) => {
 
-    // edit button working :-
+    // Edit button added below :-
+
+    // edit button working
     if (e.target.classList.contains("edit_btn") == true) {
 
         // hiding booking buttom 
