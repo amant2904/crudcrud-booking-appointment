@@ -139,10 +139,13 @@ document.getElementById("main_table").addEventListener('click', (e) => {
         })
     }
 
-    // delete button working :-
+    // delete button added below :-
+
+    // delete button working 
     else if (e.target.classList.contains("dlt_btn") == true) {
-        axios.delete(api_url + "/" + e.target.parentElement.parentElement.children[6].textContent).then()
+        axios.delete(api_url + "/" + e.target.parentElement.parentElement.children[6].textContent).then(res => {
+            e.target.parentElement.parentElement.remove();
+        })
             .catch(err => console.log(err));
-        e.target.parentElement.parentElement.remove();
     }
 })
